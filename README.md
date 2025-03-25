@@ -98,7 +98,9 @@ You can run the analysis tasks either locally or using Docker.
 
 2. **Access the Spark Master Container**:
    ```bash
-   docker exec -it spark-master bash
+   docker cp input my-spark-master:/opt/bitnami/spark
+   docker cp src my-spark-master:/opt/bitnami/spark
+   docker exec -it my-spark-master bash  
    ```
 
 3. **Navigate to the Spark Directory**:
@@ -118,6 +120,10 @@ You can run the analysis tasks either locally or using Docker.
 5. **Exit the Container**:
    ```bash
    exit
+   docker cp my-spark-master:/opt/bitnami/spark/outputs/hashtag_trends.csv /outputs
+   docker cp my-spark-master:/opt/bitnami/spark/outputs/engagement_by_age.csv /outputs   
+   docker cp my-spark-master:/opt/bitnami/spark/outputs/sentiment_engagement.csv /outputs 
+   docker cp my-spark-master:/opt/bitnami/spark/outputs/top_verified_users.csv /outputs 
    ```
 
 6. **Verify the Outputs**:
@@ -298,6 +304,139 @@ A leaderboard of verified users based on audience engagement.
 | @designer_dan  | 1320        |
 
 ---
+
+## 🔍 Code Explanation for Each Task
+
+All the analysis code is located in the `src/` directory. Each script is responsible for solving one of the assignment tasks using PySpark's powerful DataFrame and SQL APIs. Below is a breakdown of how each task is implemented.
+
+---
+
+### ✅ Task 1: Hashtag Trends (`task1_hashtag_trends.py`)
+
+**Goal:** Identify the top 10 most frequently used hashtags from all posts.
+
+**Steps:**
+1. Load `posts.csv` into a DataFrame using `spark.read.csv()` with headers.
+2. Split the `Hashtags` column into arrays using `split()`.
+3. Use `explode()` to flatten arrays into individual hashtag rows.
+4. Group by `hashtag` and count how often each one appears.
+5. Sort the hashtags in descending order based on count.
+6. Save the result to `outputs/hashtag_trends.csv`.
+
+**Key PySpark Functions:**
+- `split(col("Hashtags"), ",")`
+- `explode()`
+- `groupBy().count()`
+- `orderBy()`
+
+**Code Snippet:**
+```python
+hashtag_counts = posts_df.select(
+    explode(split(col("Hashtags"), ",")).alias("hashtag")
+).groupBy("hashtag").count().orderBy(col("count").desc())
+
+
+---
+
+### ✅ Task 2: Engagement by Age Group (`task2_engagement_by_age.py`)
+
+**🎯 Goal:**  
+Analyze how users from different age groups (Teen, Adult, Senior) engage with posts based on average likes and retweets.
+
+**🧠 Approach:**
+1. Load `posts.csv` and `users.csv` using `spark.read.csv()` with `inferSchema=True`.
+2. Perform an inner join on `UserID` to combine post and user info.
+3. Group the joined DataFrame by `AgeGroup`.
+4. Use `avg()` to calculate average likes and retweets.
+5. Sort the results by average likes in descending order.
+6. Save the final output to `outputs/engagement_by_age.csv`.
+
+**🛠️ PySpark Functions Used:**
+- `join()` – combine both DataFrames on `UserID`
+- `groupBy().agg(avg())` – compute average metrics
+- `orderBy()` – sort age groups by engagement
+
+**💡 Sample Code Snippet:**
+```python
+joined_df = posts_df.join(users_df, "UserID")
+
+engagement_df = joined_df.groupBy("AgeGroup").agg(
+    avg(col("Likes")).alias("AvgLikes"),
+    avg(col("Retweets")).alias("AvgRetweets")
+).orderBy(col("AvgLikes").desc())
+
+---
+
+### ✅ Task 3: Sentiment vs Engagement (`task3_sentiment_vs_engagement.py`)
+
+**Objective:**  
+Explore the relationship between sentiment and post engagement (likes and retweets). Posts are categorized as Positive, Neutral, or Negative based on their sentiment scores.
+
+**Steps:**
+1. Load the `posts.csv` file with `inferSchema=True` to interpret numeric columns like `SentimentScore`.
+2. Use `when()` and `otherwise()` to create a new column `Sentiment`:
+   - **Positive**: SentimentScore > 0.3
+   - **Neutral**: -0.3 ≤ SentimentScore ≤ 0.3
+   - **Negative**: SentimentScore < -0.3
+3. Group the posts by `Sentiment`.
+4. Calculate average `Likes` and average `Retweets` for each sentiment group.
+5. Save the result to `outputs/sentiment_engagement.csv`.
+
+**Key Functions Used:**
+- `withColumn()` — to create the `Sentiment` label.
+- `when()` and `otherwise()` — for conditional column logic.
+- `groupBy().agg(avg(...))` — for aggregation.
+
+**Code Snippet:**
+```python
+sentiment_df = posts_df.withColumn(
+    "Sentiment",
+    when(col("SentimentScore") > 0.3, "Positive")
+    .when(col("SentimentScore") < -0.3, "Negative")
+    .otherwise("Neutral")
+)
+
+sentiment_stats = sentiment_df.groupBy("Sentiment").agg(
+    avg(col("Likes")).alias("AvgLikes"),
+    avg(col("Retweets")).alias("AvgRetweets")
+)
+
+---
+
+### ✅ Task 4: Top Verified Users by Reach (`task4_top_verified_users.py`)
+
+**Objective:**  
+Identify the top 5 most influential verified users based on total reach, where **reach = likes + retweets**.
+
+**Steps:**
+1. Load `users.csv` and `posts.csv` using `spark.read.option("header", True).csv(..., inferSchema=True)` to ensure correct data types.
+2. Filter the `users_df` to include only rows where `Verified == True`.
+3. Join the filtered users with `posts_df` on the common `UserID` column.
+4. Create a new column called `Reach`, defined as `Likes + Retweets`, using `withColumn()`.
+5. Group by `Username` and calculate the total reach using `sum()` (aliased as `TotalReach`).
+6. Sort the result in descending order of total reach.
+7. Limit the output to the **Top 5** users.
+8. Save the final result to `outputs/top_verified_users.csv`.
+
+**Key Functions Used:**
+- `filter()` — to select only verified users.
+- `join()` — to associate posts with user data.
+- `withColumn()` — to compute `Reach`.
+- `groupBy().agg(sum(...))` — to calculate total reach.
+- `orderBy().limit()` — to rank and restrict the result.
+
+**Code Snippet:**
+```python
+verified_users_df = users_df.filter(col("Verified") == True)
+
+verified_posts_df = posts_df.join(verified_users_df, "UserID").withColumn(
+    "Reach", col("Likes") + col("Retweets")
+)
+
+top_verified = verified_posts_df.groupBy("Username").agg(
+    _sum("Reach").alias("TotalReach")
+).orderBy(col("TotalReach").desc()).limit(5)
+
 
 ## **Grading Criteria**
 
